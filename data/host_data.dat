@@ -1,0 +1,471 @@
+#   HST Ceph N4258
+# Host   mu_host    mu_error  method   anchor   source
+N4258    29.4       0.025    ceph_hst   N4258   R22
+N7250    31.642     0.128    ceph_hst   N4258   R22
+N4536    30.870     0.056    ceph_hst   N4258   R22
+N3972    31.644     0.093    ceph_hst   N4258   R22
+N4424    30.854     0.131    ceph_hst   N4258   R22
+N4639    31.823     0.087    ceph_hst   N4258   R22
+N4038    31.612     0.119    ceph_hst   N4258   R22
+M101     29.188     0.050    ceph_hst   N4258   R22
+N2442    31.459     0.069    ceph_hst   N4258   R22
+N1365    31.378     0.056    ceph_hst   N4258   R22
+N5643    30.553     0.059    ceph_hst   N4258   R22
+N5584    31.773     0.057    ceph_hst   N4258   R22
+N1559    31.500     0.066    ceph_hst   N4258   R22
+N5468    33.127     0.078    ceph_hst   N4258   R22
+N1448    31.298     0.044    ceph_hst   N4258   R22
+N2525    32.059     0.102    ceph_hst   N4258   R22
+N3370    32.132     0.057    ceph_hst   N4258   R22
+N5861    32.232     0.102    ceph_hst   N4258   R22
+N3147    33.173     0.168    ceph_hst   N4258   R22
+N3021    32.473     0.161    ceph_hst   N4258   R22
+N1309    32.552     0.064    ceph_hst   N4258   R22
+N3982    31.736     0.076    ceph_hst   N4258   R22
+N1015    32.691     0.078    ceph_hst   N4258   R22
+N3447    31.947     0.042    ceph_hst   N4258   R22
+N5917    32.377     0.122    ceph_hst   N4258   R22
+U9391    32.861     0.071    ceph_hst   N4258   R22
+N3583    32.814     0.083    ceph_hst   N4258   R22
+N2608    32.620     0.156    ceph_hst   N4258   R22
+N7541    32.512     0.121    ceph_hst   N4258   R22
+N0691    32.838     0.112    ceph_hst   N4258   R22
+N3254    32.343     0.080    ceph_hst   N4258   R22
+N5728    33.101     0.207    ceph_hst   N4258   R22
+N7678    33.196     0.156    ceph_hst   N4258   R22
+M1337    33.060     0.124    ceph_hst   N4258   R22
+N4680    32.609     0.206    ceph_hst   N4258   R22
+N7329    33.252     0.120    ceph_hst   N4258   R22
+N0976    33.718     0.152    ceph_hst   N4258   R22
+N0105    34.538     0.251    ceph_hst   N4258   R22
+# Additional entries from the Tully-Fisher set as provided by Paula.
+# Last column is the PGC number.  Repeated entries are commented out.
+# The provenance of new Cephei distances is actually unclear, so we
+# label them as B25 for now.
+#       N4258   29.400    0.025  ceph_hst     N4258       R22     39600
+        N4258   29.400    0.025  ceph_hst     N4258       B25     39600
+          N55   26.394    0.031  ceph_hst     N4258       B25      1014
+         N247   27.607    0.037  ceph_hst     N4258       B25      2758
+         N300   26.289    0.070  ceph_hst     N4258       B25      3238
+          M33   24.606    0.046  ceph_hst     N4258       B25      5818
+#       N0691   32.830    0.109  ceph_hst     N4258       B25      6793
+         N925   29.779    0.040  ceph_hst     N4258       B25      9332
+#       N1365   31.378    0.056  ceph_hst     N4258       B25     13179
+        N1425   31.669    0.050  ceph_hst     N4258       B25     13602
+#       N1448   31.287    0.037  ceph_hst     N4258       B25     13727
+#       N1559   31.491    0.061  ceph_hst     N4258       B25     14814
+        N2090   30.319    0.040  ceph_hst     N4258       B25     17819
+        N2403   27.509    0.100  ceph_hst     N4258       B25     21396
+#       N2525   32.051    0.099  ceph_hst     N4258       B25     22721
+        N2541   30.219    0.050  ceph_hst     N4258       B25     23110
+#       N2608   32.612    0.154  ceph_hst     N4258       B25     24111
+        N2841   30.709    0.230  ceph_hst     N4258       B25     26512
+#       N3021   32.464    0.158  ceph_hst     N4258       B25     28357
+          M81   27.769    0.080  ceph_hst     N4258       B25     28630
+        N3109   25.533    0.022  ceph_hst     N4258       B25     29128
+        N3198   30.669    0.080  ceph_hst     N4258       B25     30197
+#       N3254   32.331    0.076  ceph_hst     N4258       B25     30895
+        N3319   30.589    0.090  ceph_hst     N4258       B25     31671
+        N3368   30.079    0.060  ceph_hst     N4258       B25     32192
+#       N3370   32.120    0.051  ceph_hst     N4258       B25     32207
+        N3621   29.079    0.060  ceph_hst     N4258       B25     34554
+        N3627   29.979    0.080  ceph_hst     N4258       B25     34695
+#       N3972   31.635    0.089  ceph_hst     N4258       B25     37466
+#       N4258   29.363    0.057  ceph_hst     N4258       B25     39600
+#       N4414   31.209    0.050  ceph_hst     N4258       B25     40692 Excluded; reportedly from R22, but not in that paper
+#       N4424   30.844    0.128  ceph_hst     N4258       B25     40809
+        N4535   30.849    0.050  ceph_hst     N4258       B25     41812
+#       N4536   30.835    0.050  ceph_hst     N4258       B25     41823
+#       N4639   31.812    0.084  ceph_hst     N4258       B25     42741
+        N4725   30.429    0.060  ceph_hst     N4258       B25     43451
+       P43690   32.920    0.123  ceph_hst     N4258       B25     43690
+        N5253   27.459    0.140  ceph_hst     N4258       B25     48334
+#       N5584   31.772    0.052  ceph_hst     N4258       B25     51344
+#       N5728   33.094    0.205  ceph_hst     N4258       B25     52521
+#       N5861   32.223    0.099  ceph_hst     N4258       B25     54097
+#       N7250   31.628    0.125  ceph_hst     N4258       B25     68535
+        N7331   30.809    0.090  ceph_hst     N4258       B25     69327
+#       N7541   32.500    0.119  ceph_hst     N4258       B25     70795
+        N7793   27.619    0.040  ceph_hst     N4258       B25     73049
+#
+# Additional entries from the SN2 empirical calibration
+# Temporarily assigned to N4258 as anchor.
+N4151 +31.04   0.07   ceph_hst   N4258   R22
+#
+#   HST Ceph LMC
+# Host   mu_host    mu_error  method  anchor source  
+LMC      18.479     0.012    ceph_hst   LMC   R22
+N7250    31.616     0.128    ceph_hst   LMC   R22
+N4536    30.822     0.056    ceph_hst   LMC   R22
+N3972    31.620     0.093    ceph_hst   LMC   R22
+N4424    30.829     0.131    ceph_hst   LMC   R22
+N4639    31.799     0.087    ceph_hst   LMC   R22
+N4038    31.588     0.119    ceph_hst   LMC   R22
+M101     29.162     0.050    ceph_hst   LMC   R22
+N2442    31.436     0.069    ceph_hst   LMC   R22
+N1365    31.403     0.056    ceph_hst   LMC   R22
+N5643    30.530     0.059    ceph_hst   LMC   R22
+N5584    31.765     0.057    ceph_hst   LMC   R22
+N1559    31.476     0.066    ceph_hst   LMC   R22
+N5468    33.103     0.078    ceph_hst   LMC   R22
+N1448    31.274     0.044    ceph_hst   LMC   R22
+N2525    32.036     0.102    ceph_hst   LMC   R22
+N3370    32.107     0.057    ceph_hst   LMC   R22
+N5861    32.209     0.102    ceph_hst   LMC   R22
+N3147    32.997     0.168    ceph_hst   LMC   R22
+N3021    32.448     0.161    ceph_hst   LMC   R22
+N1309    32.528     0.064    ceph_hst   LMC   R22
+N3982    31.710     0.076    ceph_hst   LMC   R22
+N1015    32.549     0.078    ceph_hst   LMC   R22
+N3447    31.922     0.042    ceph_hst   LMC   R22
+N5917    32.352     0.122    ceph_hst   LMC   R22
+U9391    32.836     0.071    ceph_hst   LMC   R22
+N3583    32.790     0.083    ceph_hst   LMC   R22
+N2608    32.596     0.156    ceph_hst   LMC   R22
+N7541    32.487     0.121    ceph_hst   LMC   R22
+N0691    32.814     0.112    ceph_hst   LMC   R22
+N3254    32.319     0.080    ceph_hst   LMC   R22
+N5728    33.077     0.207    ceph_hst   LMC   R22
+N7678    33.172     0.156    ceph_hst   LMC   R22
+M1337    32.907     0.124    ceph_hst   LMC   R22
+N4680    32.585     0.206    ceph_hst   LMC   R22
+N7329    33.229     0.120    ceph_hst   LMC   R22
+N0976    33.694     0.152    ceph_hst   LMC   R22
+N0105    34.513     0.251    ceph_hst   LMC   R22
+#
+#   HST Ceph MW
+# Host   mu_host    mu_error  method    anchor  source  
+MW       10.00      0.001       ceph_hst   MW   R22
+N7250    31.634     0.128       ceph_hst   MW   R22
+N4536    30.839     0.056       ceph_hst   MW   R22
+N3972    31.637     0.093       ceph_hst   MW   R22
+N4424    30.846     0.131       ceph_hst   MW   R22
+N4639    31.816     0.087       ceph_hst   MW   R22
+N4038    31.606     0.119       ceph_hst   MW   R22
+M101     29.180     0.050       ceph_hst   MW   R22
+N2442    31.453     0.069       ceph_hst   MW   R22
+N1365    31.420     0.056       ceph_hst   MW   R22
+N5643    30.547     0.059       ceph_hst   MW   R22
+N5584    31.783     0.057       ceph_hst   MW   R22
+N1559    31.494     0.066       ceph_hst   MW   R22
+N5468    33.120     0.078       ceph_hst   MW   R22
+N1448    31.291     0.044       ceph_hst   MW   R22
+N2525    32.053     0.102       ceph_hst   MW   R22
+N3370    32.125     0.057       ceph_hst   MW   R22
+N5861    32.226     0.102       ceph_hst   MW   R22
+N3147    33.014     0.168       ceph_hst   MW   R22
+N3021    32.466     0.161       ceph_hst   MW   R22
+N1309    32.545     0.064       ceph_hst   MW   R22
+N3982    31.728     0.076       ceph_hst   MW   R22
+N1015    32.566     0.078       ceph_hst   MW   R22
+N3447    31.940     0.042       ceph_hst   MW   R22
+N5917    32.369     0.122       ceph_hst   MW   R22
+U9391    32.853     0.071       ceph_hst   MW   R22
+N3583    32.807     0.083       ceph_hst   MW   R22
+N2608    32.614     0.156       ceph_hst   MW   R22
+N7541    32.505     0.121       ceph_hst   MW   R22
+N0691    32.832     0.112       ceph_hst   MW   R22
+N3254    32.336     0.080       ceph_hst   MW   R22
+N5728    33.094     0.207       ceph_hst   MW   R22
+N7678    33.189     0.156       ceph_hst   MW   R22
+M1337    32.924     0.124       ceph_hst   MW   R22
+N4680    32.602     0.206       ceph_hst   MW   R22
+N7329    33.246     0.120       ceph_hst   MW   R22
+N0976    33.712     0.152       ceph_hst   MW   R22
+N0105    34.531     0.251       ceph_hst   MW   R22
+# HST Ceph SMC; not in the baseline.  Provided by Louise Breuval via
+# email July 3, 2025
+# Host   mu_host    mu_error  method   anchor   source
+SMC 	18.977 	0.012 	ceph_hst 	SMC 	R22 
+N7250 	31.670 	0.128 	ceph_hst 	SMC 	R22 
+N4536 	30.876 	0.056 	ceph_hst 	SMC 	R22 
+N3972 	31.674 	0.093 	ceph_hst 	SMC 	R22 
+N4424 	30.883 	0.131 	ceph_hst 	SMC 	R22 
+N4639 	31.853 	0.087 	ceph_hst 	SMC 	R22 
+N4038 	31.642 	0.119 	ceph_hst 	SMC 	R22 
+M101 	29.216 	0.050 	ceph_hst 	SMC 	R22 
+N2442 	31.490 	0.069 	ceph_hst 	SMC 	R22 
+N1365 	31.457 	0.056 	ceph_hst 	SMC 	R22 
+N5643 	30.584 	0.059 	ceph_hst 	SMC 	R22 
+N5584 	31.819 	0.057 	ceph_hst 	SMC 	R22 
+N1559 	31.530 	0.066 	ceph_hst 	SMC 	R22 
+N5468 	33.157 	0.078 	ceph_hst 	SMC 	R22 
+N1448 	31.328 	0.044 	ceph_hst 	SMC 	R22 
+N2525 	32.090 	0.102 	ceph_hst 	SMC 	R22 
+N3370 	32.161 	0.057 	ceph_hst 	SMC 	R22 
+N5861 	32.263 	0.102 	ceph_hst 	SMC 	R22 
+N3147 	33.051 	0.168 	ceph_hst 	SMC 	R22 
+N3021 	32.502 	0.161 	ceph_hst 	SMC 	R22 
+N1309 	32.582 	0.064 	ceph_hst 	SMC 	R22 
+N3982 	31.764 	0.076 	ceph_hst 	SMC 	R22 
+N1015 	32.603 	0.078 	ceph_hst 	SMC 	R22 
+N3447 	31.976 	0.042 	ceph_hst 	SMC 	R22 
+N5917 	32.406 	0.122 	ceph_hst 	SMC 	R22 
+U9391 	32.890 	0.071 	ceph_hst 	SMC 	R22 
+N3583 	32.844 	0.083 	ceph_hst 	SMC 	R22 
+N2608 	32.650 	0.156 	ceph_hst 	SMC 	R22 
+N7541 	32.541 	0.121 	ceph_hst 	SMC 	R22 
+N0691 	32.868 	0.112 	ceph_hst 	SMC 	R22 
+N3254 	32.373 	0.080 	ceph_hst 	SMC 	R22 
+N5728 	33.131 	0.207 	ceph_hst 	SMC 	R22 
+N7678 	33.226 	0.156 	ceph_hst 	SMC 	R22 
+M1337 	32.961 	0.124 	ceph_hst 	SMC 	R22 
+N4680 	32.639 	0.206 	ceph_hst 	SMC 	R22 
+N7329 	33.283 	0.120 	ceph_hst 	SMC 	R22 
+N0976 	33.748 	0.152 	ceph_hst 	SMC 	R22 
+N0105 	34.567 	0.251 	ceph_hst 	SMC 	R22 
+#
+# JWST Ceph CCHP  commented out because not in F25
+Host mu_host mu_error  method    anchor  source 
+N4258  29.4    0.087   ceph_jwst   N4258   CCHP
+#M101   29.14   0.08    ceph_jwst   N4258   CCHP
+#N1365  31.26   0.1     ceph_jwst   N4258   CCHP
+#N2442  31.47   0.09    ceph_jwst   N4258   CCHP
+#N3972  31.67   0.1     ceph_jwst   N4258   CCHP
+#N4038  31.7    0.12    ceph_jwst   N4258   CCHP
+#N4424  30.91   0.22    ceph_jwst   N4258   CCHP
+#N4536  30.95   0.12    ceph_jwst   N4258   CCHP
+#N4639  31.8    0.12    ceph_jwst   N4258   CCHP
+#N5643  30.51   0.08    ceph_jwst   N4258   CCHP
+#N7250  31.41   0.12    ceph_jwst   N4258   CCHP
+#
+# JWST Ceph SH0ES
+#Host  mu_host  mu_error  method    anchor  source  
+N4258  29.4     0.03    ceph_jwst   N4258   SH0ES
+M101   29.12    0.03    ceph_jwst   N4258   SH0ES
+N1448  31.289   0.03    ceph_jwst   N4258   SH0ES
+N1559  31.371   0.03    ceph_jwst   N4258   SH0ES
+N3447  31.95    0.03    ceph_jwst   N4258   SH0ES
+N4038  31.67    0.03    ceph_jwst   N4258   SH0ES
+N5468  32.975   0.03    ceph_jwst   N4258   SH0ES
+N5584  31.838   0.03    ceph_jwst   N4258   SH0ES
+N5643  30.52    0.03    ceph_jwst   N4258   SH0ES
+#
+# JWST TRGB CCHP
+# Host   mu_host mu_error   method   anchor  source
+N4258   29.4    0.035   trgb_jwst   N4258   CCHP
+M101    29.151   0.042    trgb_jwst   N4258   CCHP
+N1365   31.366   0.069    trgb_jwst   N4258   CCHP
+N2442   31.646   0.097    trgb_jwst   N4258   CCHP
+N3972   31.747   0.068    trgb_jwst   N4258   CCHP
+N4038   31.645   0.078    trgb_jwst   N4258   CCHP
+N4424   30.926   0.03    trgb_jwst   N4258   CCHP
+N4536   30.923   0.052    trgb_jwst   N4258   CCHP
+N4639   31.774   0.073    trgb_jwst   N4258   CCHP
+N5643   30.643   0.071    trgb_jwst   N4258   CCHP
+N7250   31.629   0.047    trgb_jwst   N4258   CCHP
+#
+# JWST TRGB SH0ES
+# Host   mu_host mu_error  method    anchor  source  
+N4258   29.4    0.05    trgb_jwst   N4258   SH0ES
+N1448   31.38   0.07    trgb_jwst   N4258   SH0ES
+N1559   31.5    0.05    trgb_jwst   N4258   SH0ES
+N2525   31.81   0.08    trgb_jwst   N4258   SH0ES
+N3447   31.92   0.09    trgb_jwst   N4258   SH0ES
+N5584   31.81   0.09    trgb_jwst   N4258   SH0ES
+N5643   30.58   0.06    trgb_jwst   N4258   SH0ES
+N3370   32.19   0.08    trgb_jwst   N4258   SH0ES
+N5861   32.10   0.11    trgb_jwst   N4258   SH0ES
+# N1380   31.397  0.072   trgb_jwst   N4258  SH0ES
+#
+#      <  HST TRGB   > a la 2408.06153
+# Host   mu_host    mu_error  method    anchor  source    
+N4258   29.4      0.04    trgb_hst   N4258   CCHP
+M101    29.078    0.04    trgb_hst   N4258   CCHP
+N1309   32.499    0.07    trgb_hst   N4258   CCHP
+N1316   31.460    0.04    trgb_hst   N4258   CCHP
+N1365   31.360    0.05    trgb_hst   N4258   CCHP
+# N1404   31.360    0.06    trgb_hst   N4258   CCHP
+N1448   31.320    0.06    trgb_hst   N4258   CCHP
+N3021   32.221    0.05    trgb_hst   N4258   CCHP
+M96     30.313    0.04    trgb_hst   N4258   CCHP
+N3370   32.273    0.05    trgb_hst   N4258   CCHP
+M66     30.221    0.04    trgb_hst   N4258   CCHP
+N4038   31.681    0.05    trgb_hst   N4258   CCHP
+N4424   31.000    0.06    trgb_hst   N4258   CCHP
+N4526   30.998    0.07    trgb_hst   N4258   CCHP
+N4536   30.964    0.05    trgb_hst   N4258   CCHP
+N5584   31.822    0.10    trgb_hst   N4258   CCHP
+N5643   30.475    0.08    trgb_hst   N4258   CCHP
+#
+#
+#      <  HST TRGB   > Various
+#Host  mu_host  mu_error  method    anchor  source  
+N4258   29.4    0.04     trgb_hst   N4258   Ex
+N7814   30.860  0.07     trgb_hst   N4258   Ex
+
+# The above should be listed as ML method, not Sobel
+# per slack message by Dorota Skowron 20250327
+N4639   31.79   0.09     trgb_hst   N4258   Ex ;Jang program Sean proc
+N3982   31.50   0.13     trgb_hst   N4258   Ex ;Jang program Sean proc
+N4414   31.24   0.09     trgb_hst   N4258   Ex ;Jang program Sean proc
+N4457   31.05   0.10     trgb_hst   N4258   Ex ;Jang program Sean proc
+N4666   30.90   0.05     trgb_hst   N4258   Ex ;Jang program Sean proc
+#
+# Calibrators for SNe II from Thomas de Jaeger
+N4258    +29.40   0.06   trgb_hst   N4258   A22
+N6946     29.21   0.08   trgb_hst   N4258   A22
+N5194     29.61   0.03   trgb_hst   N4258   A22
+N7793     27.75   0.06   trgb_hst   N4258   A22
+N0628     29.90   0.12   trgb_hst   N4258   A22
+#
+
+# JWST JAGB CCHP    a la 2408.06153
+#Host  mu_host mu_error  method    anchor  source  
+N4258  29.4    0.05    jagb_jwst   N4258   CCHP
+M101   29.208   0.045    jagb_jwst   N4258   CCHP
+N1365  31.384   0.039    jagb_jwst   N4258   CCHP
+N2442  31.605   0.044    jagb_jwst   N4258   CCHP
+N4536  30.971   0.034    jagb_jwst   N4258   CCHP
+N4639  31.733   0.039    jagb_jwst   N4258   CCHP
+N5643  30.582   0.038    jagb_jwst   N4258   CCHP
+N7250  31.592   0.043    jagb_jwst   N4258   CCHP
+
+#
+#  JWST JAGB SH0ES
+#Host   mu_host mu_error  method    anchor  source  
+N4258   29.4    0.05    jagb_jwst   N4258   SH0ES
+N1448   31.29   0.04    jagb_jwst   N4258   SH0ES
+N1559   31.39   0.04    jagb_jwst   N4258   SH0ES
+N3447   31.85   0.07    jagb_jwst   N4258   SH0ES
+N5584   31.85   0.04    jagb_jwst   N4258   SH0ES
+N5643   30.49   0.04    jagb_jwst   N4258   SH0ES
+#
+#    MIRAs   
+#Host  mu_host mu_error method  anchor  source
+# N4258   29.4    0.04    miras   N4258   H24
+# M101    29.1    0.06    miras   N4258   H24
+# N1559   31.41   0.08    miras   N4258   H24
+# Updated values per slack message by Caroline Huang 20250327
+# Hi Stefano -- thank you so much for pulling this together.
+# Your numbers are 100% correct as listed by the the paper,
+# but I realized that I did not report the NGC 4258 anchor
+# only values in my tables in my 2024 paper (I will make sure
+# to do this next time -- also between the
+# The end result is that the lines should be this:
+#    Miras
+# Host  mu_host mu_error method  anchor  source
+N4258   29.4     0.04     miras   N4258   H24
+M101    29.09    0.068    miras   N4258   H24
+N1559   31.41    0.08     miras   N4258   H24
+
+# TF calibrators with TRGB from A21 paper (as provided by Paula)
+        N4258   29.400    0.030  trgb_hst     N4258       A21     39600
+        # N7814   30.730    0.040  trgb_hst     N4258       A21       218
+          N24   29.260    0.020  trgb_hst     N4258       A21       701
+         N247   27.800    0.020  trgb_hst     N4258       A21      2758
+         N253   27.790    0.020  trgb_hst     N4258       A21      2789
+         N300   26.540    0.050  trgb_hst     N4258       A21      3238
+         U685   28.360    0.020  trgb_hst     N4258       A21      3974
+          M33   24.800    0.070  trgb_hst     N4258       A21      5818
+        P6574   29.310    0.070  trgb_hst     N4258       A21      6574
+        N0672   29.220    0.080  trgb_hst     N4258       A21      6595
+        U1281   28.560    0.020  trgb_hst     N4258       A21      6699
+         N784   28.610    0.020  trgb_hst     N4258       A21      7671
+         N891   29.950    0.070  trgb_hst     N4258       A21      9031
+        P9962   28.480    0.020  trgb_hst     N4258       A21      9962
+       P11139   28.790    0.020  trgb_hst     N4258       A21     11139
+        N1311   28.670    0.020  trgb_hst     N4258       A21     12460
+       U02684   29.200    0.080  trgb_hst     N4258       A21     12514
+       P13163   28.910    0.030  trgb_hst     N4258       A21     13163
+        # N1365   31.400    0.040  trgb_hst     N4258       A21     13179
+        # N1448   31.330    0.040  trgb_hst     N4258       A21     13727
+        N1569   27.500    0.160  trgb_hst     N4258       A21     15345
+        N1560   27.430    0.150  trgb_hst     N4258       A21     15488
+       P16957   27.700    0.210  trgb_hst     N4258       A21     16957
+        N2188   29.570    0.040  trgb_hst     N4258       A21     18536
+        U3600   29.990    0.210  trgb_hst     N4258       A21     19871
+       U03698   30.210    0.160  trgb_hst     N4258       A21     20264
+        N2403   27.460    0.050  trgb_hst     N4258       A21     21396
+       P21614   29.460    0.030  trgb_hst     N4258       A21     21614
+        U4115   29.440    0.030  trgb_hst     N4258       A21     22277
+        N2683   29.910    0.050  trgb_hst     N4258       A21     24930
+        N2915   28.110    0.070  trgb_hst     N4258       A21     26761
+        N2903   29.760    0.040  trgb_hst     N4258       A21     27077
+        N2976   27.770    0.040  trgb_hst     N4258       A21     28120
+        U5288   30.260    0.100  trgb_hst     N4258       A21     28378
+          M81   27.790    0.080  trgb_hst     N4258       A21     28630
+        N3109   25.640    0.090  trgb_hst     N4258       A21     29128
+       U05427   29.370    0.060  trgb_hst     N4258       A21     29230
+       U05456   30.050    0.050  trgb_hst     N4258       A21     29428
+        N3368   30.190    0.020  trgb_hst     N4258       A21     32192
+       P32250   29.160    0.030  trgb_hst     N4258       A21     32250
+        N3432   29.750    0.170  trgb_hst     N4258       A21     32643
+        N3621   29.170    0.030  trgb_hst     N4258       A21     34554
+        N3627   30.210    0.030  trgb_hst     N4258       A21     34695
+        N4068   28.150    0.020  trgb_hst     N4258       A21     38148
+        N4144   29.140    0.030  trgb_hst     N4258       A21     38688
+       U07298   28.130    0.120  trgb_hst     N4258       A21     39316
+        N4236   28.240    0.040  trgb_hst     N4258       A21     39346
+        N4244   28.120    0.070  trgb_hst     N4258       A21     39422
+        N4242   29.360    0.070  trgb_hst     N4258       A21     39423
+       P39573   26.880    0.090  trgb_hst     N4258       A21     39573
+        N4298   30.820    0.180  trgb_hst     N4258       A21     39950
+       U07512   30.320    0.080  trgb_hst     N4258       A21     40563
+        # N4424   31.000    0.050  trgb_hst     N4258       A21     40809
+       U07577   27.080    0.040  trgb_hst     N4258       A21     40904
+        U7599   28.400    0.070  trgb_hst     N4258       A21     41020
+        N4455   29.060    0.070  trgb_hst     N4258       A21     41066
+       P41093   29.600    0.110  trgb_hst     N4258       A21     41093
+       P41314   29.520    0.040  trgb_hst     N4258       A21     41314
+       U07678   29.740    0.040  trgb_hst     N4258       A21     41522
+        N4517   29.570    0.140  trgb_hst     N4258       A21     41618
+       P41701   29.900    0.050  trgb_hst     N4258       A21     41701
+#       N4536   31.000    0.130  trgb_hst     N4258       A21     41823
+        N4559   29.680    0.030  trgb_hst     N4258       A21     42002
+        N4565   30.360    0.020  trgb_hst     N4258       A21     42038
+        N4592   29.690    0.040  trgb_hst     N4258       A21     42336
+         M104   29.790    0.030  trgb_hst     N4258       A21     42407
+        N4605   28.670    0.020  trgb_hst     N4258       A21     42408
+        N4631   29.280    0.020  trgb_hst     N4258       A21     42637
+       P43048   28.640    0.050  trgb_hst     N4258       A21     43048
+          M64   28.160    0.030  trgb_hst     N4258       A21     44182
+        N4861   29.940    0.020  trgb_hst     N4258       A21     44536
+        UA319   28.790    0.040  trgb_hst     N4258       A21     44982
+       P45084   28.880    0.060  trgb_hst     N4258       A21     45084
+        N4945   27.710    0.050  trgb_hst     N4258       A21     45279
+        N5023   28.860    0.050  trgb_hst     N4258       A21     45849
+       U08308   28.150    0.150  trgb_hst     N4258       A21     45939
+        U8331   28.180    0.040  trgb_hst     N4258       A21     46127
+        N5055   29.720    0.020  trgb_hst     N4258       A21     46153
+        N5204   28.330    0.230  trgb_hst     N4258       A21     47368
+       U08508   27.130    0.080  trgb_hst     N4258       A21     47495
+        N5229   29.710    0.020  trgb_hst     N4258       A21     47788
+       P47847   29.160    0.040  trgb_hst     N4258       A21     47847
+       P48738   27.680    0.040  trgb_hst     N4258       A21     48738
+       U08760   27.550    0.050  trgb_hst     N4258       A21     49158
+        U8837   29.240    0.020  trgb_hst     N4258       A21     49448
+        N5398   30.420    0.190  trgb_hst     N4258       A21     49923
+        N5408   28.650    0.060  trgb_hst     N4258       A21     50073
+        N5477   29.110    0.040  trgb_hst     N4258       A21     50262
+       U09405   28.770    0.030  trgb_hst     N4258       A21     52142
+        U9660   30.110    0.070  trgb_hst     N4258       A21     53641
+       P54392   27.200    0.100  trgb_hst     N4258       A21     54392
+        N5907   31.130    0.050  trgb_hst     N4258       A21     54470
+        N6503   28.940    0.060  trgb_hst     N4258       A21     60921
+        N6744   29.810    0.060  trgb_hst     N4258       A21     62836
+       P63432   29.590    0.040  trgb_hst     N4258       A21     63432
+       P64181   29.770    0.120  trgb_hst     N4258       A21     64181
+       P65603   28.640    0.050  trgb_hst     N4258       A21     65603
+        N7090   29.840    0.050  trgb_hst     N4258       A21     67045
+       P67908   26.480    0.040  trgb_hst     N4258       A21     67908
+        N7640   29.590    0.060  trgb_hst     N4258       A21     71220
+       P71464   29.570    0.020  trgb_hst     N4258       A21     71464
+        UA442   28.220    0.070  trgb_hst     N4258       A21     72228
+       P72675   29.180    0.040  trgb_hst     N4258       A21     72675
+        N7793   27.750    0.060  trgb_hst     N4258       A21     73049
+       P86644   28.840    0.060  trgb_hst     N4258       A21     86644
+     P1599237   29.550    0.030  trgb_hst     N4258       A21   1599237
+     P5072711   29.680    0.070  trgb_hst     N4258       A21   5072711
+
+# Additional calibrators for SBF from Jensen+ 2025 paper
+# Based on TRGB JWST; from Anand 2024b and Anand 2025
+N4258       29.4     0.05    trgb_jwst    N4258    A25
+N1380       31.397   0.034   trgb_jwst    N4258    A25
+N1399       31.511   0.036   trgb_jwst    N4258    A25
+N1404       31.364   0.034   trgb_jwst    N4258    A25
+N4472       31.091   0.032   trgb_jwst    N4258    A25
+N4552       30.933   0.041   trgb_jwst    N4258    A25
+N4636       31.120   0.035   trgb_jwst    N4258    A25
+N4649       31.061   0.034   trgb_jwst    N4258    A25
+N4697       30.330   0.036   trgb_jwst    N4258    A25

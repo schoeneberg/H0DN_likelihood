@@ -1,0 +1,10 @@
+# Distances and velocities from Pesce 2020, ApJL 891:L1, Table 1
+# Corrected velocities from Table 4
+# Name          Distance  D error+  D error -    V   V_error       Corrected velocities     Peculiar velocity
+#                          (MPC)                    (km/s)      group   2M++  CF3 M2000  group 2M++   CF3  M2000
+UGC_3789       51.5      -4.0      +4.5     3319.9   0.8       3401  3375  3292  3464   −80   −54    28   −142
+NGC_6264      132.1     -17       +21      10192.6   0.8      10379  9962 10175 10677  −180   224    17   −468
+NGC_6323      109.4     -23       +34       7801.5   1.5       8275  7378  8112  8208  −461   414  −302   −396
+NGC_5765b     112.2      -5.1      +5.4     8525.7   0.7       8594  8398  8333  9000   −66   124   187   −460
+CGCG_074-064   87.6      -7.2      +7.9     7172.2   1.9       6511  6869  7037  7554   647   297   132   −372
+# NGC_4258        7.58     -0.11      0.11     679.3   0.4        725   417   425   581   −46   262   254     98

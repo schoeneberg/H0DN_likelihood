@@ -1,0 +1,25 @@
+# GROUPS file.
+# Defines GROUPS and HOSTS.  The concept is that HOSTS in the same
+# GROUP have an equation tying them together with an intrinsic
+# dispersion SIGMA.
+# Each HOST has a distance modulus parameter.  Each GROUP has a
+# distance modulus parameter.  Generally there are no additional
+# covariances.   SIGMA represents the intrinsic distance modulus
+# dispersion of the host with respect to the group; it will generally
+# be the same for all group members, but it could differ for hosts
+# that are potential outliers.
+#
+# GROUPNAME    HOSTNAME   SIGMA
+Fornax         IC2006     0.057
+Fornax         N1344      0.057
+Fornax         N1374      0.057
+Fornax         N1375      0.057
+Fornax         N1380      0.057
+Fornax         N1399      0.057
+Fornax         N1404      0.057
+Virgo          N4458      0.086
+Virgo          N4472      0.086
+Virgo          N4489      0.086
+Virgo          N4552      0.086
+Virgo          N4636      0.086
+Virgo          N4649      0.086
