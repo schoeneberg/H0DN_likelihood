@@ -1,0 +1,26 @@
+INSTALLATION
+
+This program requires access to a full license for IDL 8 or later, and
+to some packages.  Version 8 or later is required because the code
+uses the IDL implementation of lists.  Known dependencies include the
+IDL Astro library, LAPACK routines (which are part of the standard
+distribution), and the CGCOLOR routine, part of David Fanning's IDL
+tools.  The CGCOLOR routine is only required if plots are requested.
+This version is known to work under Mac OSX (multiple versions)
+and is likely to work under other flavors of UNIX.  It is not expected
+to work under Windows; the author does not have access to IDL
+in a Windows-based system.
+
+The default installation would save all the code in a subdirectory
+named IDLCODE, and all the data in a subdirectory named DATA.
+Code and data can also be placed in the same directory if desired.
+The results of runs (e.g., using the VARS procedure)
+can be placed in diffeent directories if desired; since VARS
+produces many output files, using a different directory is recommended.
+
+The main routine org_v3p9 is designed primarily for use from the IDL
+command line.  The author does not use the IDL Development Environment
+or workbench, so he cannot provide advice on how to use the routines
+in that environment, but all commands used are close to IDL standard,
+so it is expected that any required changes will be minor.
+

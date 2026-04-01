@@ -1,0 +1,73 @@
+This directory contains all the IDL routines and data files
+needed to reproduce the main results in the H0DN paper.
+
+The main workhorse is the routine in org_v3p9.pro , called org_v3p9.
+This reflects V3.9, which has been slightly cleaned up compared to 
+versions V3.7 and V3.8 used during production; however, the results
+have been tested to be identical.  Additional user-callable routines include
+vars.pro, which produces all the main variants in Table 4 of the paper
+(and a few extra), and the utilities avclip.pro, mpinv.pro,
+and uniquify.pro, used by the main routine.  Other routines
+are primarily designed to be called from org_v3p9 or vars.
+
+To improve readability, detailed information on how the routines work,
+how the data files are defined, and so on has been split into several
+README, which are numbered in logical order.
+This readme only includes basic information about the program.
+
+For a quick result, save the data in the directory ../data,
+as recommended in the installation instructions.  Then run from 
+the IDL prompt the following command:
+
+vars, basedir='../data/', outdir='./output/', save='savefile.sav'
+
+This will run all the variants in Table 4 of the paper (except for the O
+variants, which come from a different process), provide on-screen
+summary of results, create text and postscript files for each in the
+directory ./output (which must be created beforehand), and save
+relevant output in the IDL save file 'savefile.sav'.  (If the data
+have been saved in the current directory, simply leave out the
+basedir parameter.)
+
+More details on the interpretation of the output files
+wll be provided in README_IDL_5_OUTPUT.
+
+For specific cases, extract the relevant org_v3p9
+command from vars.pro (a short descriptrion is
+provided for each instance) and run it standalone;
+for example, the command for V02 (baseline plus MIRAs) is:
+
+basedir = '../data/'
+id = 'V02'
+outdir = './'
+label = id + ': Baseline + Miras'
+org_v3p9, config='none', anchor_data='anchors.dat', basedir=basedir, $
+          details=dd, /sbf_calib, groups_file='groups.dat', /mm, $
+          sn1a_calib='sn1a_calib.dat', sn1a_hf='sn1a_hf_pp.dat', $
+          sn1a_covar='sn1a_covar_pp.dat', $
+          exclude_list=['SMC','*jagb*','b25'], $
+          log=outdir+id+'.txt', plot=outdir+id+'.ps', $
+          plabel=label
+
+Here ID and LABEL are used to name the output text and plot files,
+with OUTDIR as  their location.  The parameters in the org_v3p9 call
+have the following meaning:
+
+config='none'                        Do not use a configuration file
+anchor_data='anchors.dat'            Anchor name and uncertainties
+basedir=basedir                      The default location for data files
+details=dd                           Output structure with solution details
+/sbf_calib                           Include SBF data with default files
+groups_file='groups.dat'             Use the GROUPS file named
+/mm                                  Include megamasers with the default files
+sn1a_calib='sn1a_calib.dat'          Include SN1A calibrators in named file
+sn1a_hf='sn1a_hf_pp.dat'             Include SN1A in Hubble flow from named file (Pantheon+)
+sn1a_covar='sn1a_covar_pp.dat'       Covariance for SN1a in Hubble flow from named file (Pantheon+)
+exclude_list=['SMC','*jagb*','b25']  Exclude list for host measurements
+log=outdir+id+'.txt'                 File with summary output
+plot=outdir+id+'.ps'                 File with diagnostic plot (in postscript format)
+plabel=label                         Label used in plot
+
+More details on input parameters and output variables are given
+in the specific README files.
+
