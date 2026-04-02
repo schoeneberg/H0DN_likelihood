@@ -21,7 +21,7 @@ cd configs
 h0_constrainer config.ini
 ```
 
-This performs a generalized least-squares fit using the configuration and data files in the data directory.
+This performs a generalized least-squares fit using the configuration and data files in the data directory. The example `config.ini` in `configs/` is heavily commented: most options for choosing a distance network are explained there.
 
 ### Command-Line Options
 
@@ -55,9 +55,11 @@ savefile = results.json    # Detailed results for analysis
 
 ## Configs
 
+**Note:** `configs/config.ini` is long and deliberately comment-heavy. Inline notes there explain how settings pick distance indicators and other pieces of the network as well as many other parameters that define the analysis setting. 
+
 The `configs/` directory contains:
 
-- **config.ini**: Working example configuration for the baseline analysis with extensive examples of alternative configs
+- **config.ini**: Runnable baseline analysis, with many commented blocks showing alternative distance-network choices (read the file for the full option set)
 - **variants.ini**: Multi-variant run (requires the base_variants_config.ini)
 - **base_variants_config.ini**: A baseline configuration that the variants modify
 
