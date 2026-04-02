@@ -1,0 +1,18 @@
+.DS_Store
+# Output files
+h0_constrainer/configs/**/*.json
+h0_constrainer/configs/**/*.txt
+out.txt
+residuals.pdf
+residuals.ps
+sv.json
+
+# Ignore egg-info directories
+h0_constrainer/h0_constrainer.egg-info/
+
+# Ignore build directory
+h0_constrainer/build
+/
+
+# Ignore pycache
+h0_constrainer/h0_constrainer/__pycache__/
