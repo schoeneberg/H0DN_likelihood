@@ -1,6 +1,6 @@
 Folder with data files for both IDL and Python versions. See instructions in the idlcode folder for information on how to direct the code to look for data files here.
 
-Several of the data files here are used in variants.  Please check the code in idlcode/vars.pro to identify which files are used in which variants.
+Several of the data files here are used in variants.  Please check the code in idlcode/vars.pro or the instructions in h0_constrainer/config to identify which files are used in which variants.
 
 
 ### Summary of files in this folder
