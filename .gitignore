@@ -11,8 +11,7 @@ sv.json
 h0_constrainer/h0_constrainer.egg-info/
 
 # Ignore build directory
-h0_constrainer/build
-/
+h0_constrainer/build/
 
 # Ignore pycache
 h0_constrainer/h0_constrainer/__pycache__/
