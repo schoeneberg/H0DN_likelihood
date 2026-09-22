@@ -24,12 +24,7 @@ Functions:
     main: Primary analysis workflow.
 """
 
-# TODO list:
-# * potentially sub-group data stuffs into sub-dictionaries (optional)
-# * move MM and EPM use of q0, j0 into the actual building of eq_data
-# * allow equation data to be UPDATED wtih new q0, j0 values
-# * allow sampling of parameters optionally or marginalized
-from h0_constrainer import pipeline
+from . import pipeline
 def main(cf_file = None):
   pip = pipeline.H0DN_Pipeline()
   ini = pip.read_config(cf_file)

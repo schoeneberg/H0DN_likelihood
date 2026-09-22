@@ -27,8 +27,8 @@ import os
 import tempfile
 import configparser
 import subprocess
-from h0_constrainer.main import main  # used for the non-variant path
-import h0_constrainer.config_reader as config_reader  
+from .main import main  # used for the non-variant path
+from . import config_reader  
 
 def run_variant(variant_name, base_config_dict, overrides, output_handle):
     """Execute a single variant analysis in an isolated subprocess.

@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "H0DN"
-version = "1.0.0"
+version = "0.1.0"
 description = "A likelihood wrapper around the 'h0_constrainer' package, which is a cosmological solver package that constrains H0, developed for the H0DN collaboration based on the original IDL code."
 authors = [
     { name = "Emre Ozulker", email = "ozulkeremre@gmail.com" },
@@ -32,9 +32,10 @@ h0_constrainer = "h0_constrainer.cli:cli_entry"
 
 #[tool.setuptools]
 #packages = ["h0_constrainer"]
+
 [tool.setuptools]
-package-dir = { "h0_constrainer" = "h0_constrainer/h0_constrainer", "H0DN_like" = "H0DN_like" }
-packages = ["h0_constrainer", "H0DN_like"]
+include-package-data = true
+packages = ["h0_constrainer", "h0_constrainer.h0_constrainer", "H0DN_like"]
 
 [tool.setuptools.package-data]
-h0_constrainer = ["config/*", "data/*"]
+h0_constrainer = ["configs/*.ini", "data/*.dat"]

@@ -149,6 +149,7 @@ def vprint(*args, **kwargs):
         *args: Positional arguments passed to print().
         **kwargs: Keyword arguments passed to print().
     """
+    global verbose
     if verbose:
         print(*args, **kwargs)
 
@@ -163,6 +164,7 @@ def wprint(*args, **kwargs):
         *args: Positional arguments passed to print().
         **kwargs: Keyword arguments passed to print().
     """
+    global warn
     if warn:
         print(*args, **kwargs)
 

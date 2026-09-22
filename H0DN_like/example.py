@@ -1,6 +1,6 @@
 """
 Simple standalone test / example usage script for the H0DN_like likelihood.
-Run from anywhere after `pip install -e .`:
+Run from anywhere after `pip install`:
     python H0DN_like/example.py
 """
 if __name__ == "__main__":
@@ -10,8 +10,8 @@ if __name__ == "__main__":
   info = {
       "likelihood": {
           "H0DN_like": {
-              #"modify_config": {"sn1a_hf_file" : "", "sn1a_hf_cov_file":"", "alpha_sn1a":0.714, "alpha_sn1a_error":1000.0},
-          },
+                        #"modify_config": {"sn1a_hf_file" : "", "sn1a_hf_cov_file":"", "alpha_sn1a":0.714, "alpha_sn1a_error":1000.0},
+                        },
           #"sn.pantheonplus" : {'use_abs_mag':True,
           #                     #'zmax':0.15
           #                     },

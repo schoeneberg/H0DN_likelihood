@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import h0_constrainer
 
-_DEFAULT_CONFIG_DIR = str(Path(h0_constrainer.__file__).resolve().parents[1] / "configs" / "base_config.ini")
+_DEFAULT_CONFIG_DIR = str(Path(h0_constrainer.__file__).resolve().parents[0] / "configs" / "base_config.ini")
 class H0DN_like(Likelihood):
     zinterp : float = np.linspace(1e-5, 3, num=1000)
     cf_file : str = _DEFAULT_CONFIG_DIR

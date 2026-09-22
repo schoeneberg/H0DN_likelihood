@@ -3,7 +3,7 @@ import sys
 import numpy as np
 import pandas as pd
 import scipy.linalg
-from h0_constrainer import config_reader, data_loader, equations, solver, logger
+from . import config_reader, data_loader, equations, solver, logger
 
 class H0DN_Pipeline:
   ini = None
