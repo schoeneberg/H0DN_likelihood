@@ -1,0 +1,40 @@
+[build-system]
+requires = [
+    "setuptools>=64",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "H0DN"
+version = "1.0.0"
+description = "A likelihood wrapper around the 'h0_constrainer' package, which is a cosmological solver package that constrains H0, developed for the H0DN collaboration based on the original IDL code."
+authors = [
+    { name = "Emre Ozulker", email = "ozulkeremre@gmail.com" },
+    { name = "Nils Schöneberg", email="nils.science@gmail.com" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.14.0",
+    "pandas>=2.2.0",
+]
+
+[project.urls]
+Repository_thisfork = "https://github.com/schoeneberg/H0DN_likelihood"
+Repository_original = "https://github.com/StefCas789/H0DN"
+
+[project.scripts]
+h0_constrainer = "h0_constrainer.cli:cli_entry"
+#h0_mcmc = "h0_constrainer.mcmc:constrain"
+
+#[tool.setuptools]
+#packages = ["h0_constrainer"]
+[tool.setuptools]
+package-dir = { "h0_constrainer" = "h0_constrainer/h0_constrainer", "H0DN_like" = "H0DN_like" }
+packages = ["h0_constrainer", "H0DN_like"]
+
+[tool.setuptools.package-data]
+h0_constrainer = ["config/*", "data/*"]
