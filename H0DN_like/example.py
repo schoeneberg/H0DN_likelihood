@@ -3,7 +3,7 @@ Simple standalone test / example usage script for the H0DN_like likelihood.
 Run from anywhere after `pip install`:
     python H0DN_like/example.py
 """
-if __name__ == "__main__":
+def main():
 
   from cobaya.run import run
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
               "Rminus1_stop": 0.005,
           }
       },
-      "output": "chains/test_h0_run3",
+      "output": "chains/test",
       "resume": True,
   }
 
