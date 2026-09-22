@@ -813,3 +813,178 @@ def build_equations(host_df, mm_df, epm_df, coma_df, groups_df,
         "group_param_index": group_param_index,
     }
 
+def adjust_equation_data(cosmo, eq_data, mm_df, epm_df, sbf_hf_df, tf_hf_df, sn2_hf_df, sn1a_hf_df,
+                         redshift_range, vpec_error, sbf_vpec_error,
+                         sn1a_IR, sn1a_vp_column, sn1a_hf_cov, z_range_sn1a, sn1a_ignore_offdiag,
+                         z_range_sn2,
+                         tf_v_column, z_range_tf,
+                         sbf_v_column, z_range_sbf,
+                         alpha_sn1a=0.714, alpha_sn1a_error=0.002, alpha_sn2=None, alpha_sn2_error=None, alpha_tf=None, alpha_tf_error=None, alpha_sbf=None, alpha_sbf_error=None):
+
+    def compute_vcmb(z):
+        z = np.asarray(z)
+        return  (c_m_s/1000.0) * ((1 + z)**2 - 1) / ((1 + z)**2 + 1)
+
+    cosmology_kz_function = cosmo["kz_function"] # = d_L(z) * H0/c / z
+    cosmology_cz_function = cosmo["cz_function"] # = d_A(z) * H0/c / z
+
+    yval = eq_data['yval']
+
+    a_sn1a = a_sn1a_err = chisq_sn1a_hf = ndof_sn1a_hf = None
+    a_sn2 = a_sn2_err = chisq_sn2_hf = ndof_sn2_hf = None
+    a_tf = a_tf_err = chisq_tf_hf = ndof_tf_hf = None
+    a_sbf = a_sbf_err = chisq_sbf_hf = ndof_sbf_hf = None
+    if eq_data['nsn1a']>0:
+        if sn1a_hf_df is not None:
+            # Common velocities from redshifts
+            vcmb = compute_vcmb(sn1a_hf_df["zcmb"])
+            vhel = compute_vcmb(sn1a_hf_df["zhel"])
+
+            if not sn1a_IR:
+                # -------- Case A: Use vpec + covariance --------
+                vpec = sn1a_hf_df[sn1a_vp_column].to_numpy()
+
+                a_sn1a, a_sn1a_err, chisq_sn1a_hf, ndof_sn1a_hf = compute_alpha(
+                    mag=sn1a_hf_df["mb"].to_numpy(),
+                    covar=sn1a_hf_cov,          # use covariance
+                    vpec=vpec,                  # peculiar-velocity column (selected earlier)
+                    vcmb=vcmb,
+                    vhel=vhel,
+                    vdisp=vpec_error,
+                    redshift_range=redshift_range,
+                    apply_redshift_range=z_range_sn1a,
+                    ignore_offdiag=sn1a_ignore_offdiag,
+                    kz_function = cosmology_kz_function
+                )
+
+            else:
+                # -------- Case B: IR case, use vcorr + mag_err, no covariance --------
+                if sn1a_vp_column == "vp_cmb":  # Note: builds from zcmb above
+                    vcorr = vcmb
+                else:
+                    # IR mode only allows 2m++ or CMB; for 2m++, build vcorr from zcorr
+                    vcorr = compute_vcmb(sn1a_hf_df["zcorr"])
+
+                a_sn1a, a_sn1a_err, chisq_sn1a_hf, ndof_sn1a_hf = compute_alpha(
+                    mag=sn1a_hf_df["mb"].to_numpy(),
+                    mag_err=sn1a_hf_df["mb_err"].to_numpy(),
+                    vhel=vhel,
+                    vcmb=vcmb,
+                    vcorr=vcorr,
+                    vdisp=vpec_error,
+                    redshift_range=redshift_range,
+                    apply_redshift_range=z_range_sn1a,
+                    kz_function = cosmology_kz_function
+                )
+
+            r_chisq_sn1a_hf=chisq_sn1a_hf/ndof_sn1a_hf
+            config_reader.vprint(f"\nAlpha from SNe Ia is computed: a_b={a_sn1a:.4f}"+u"\u00B1"+f"{a_sn1a_err:.4f}, chi2={chisq_sn1a_hf:2f}, dof={ndof_sn1a_hf}, reduced chi2={r_chisq_sn1a_hf:2f}")
+        else:
+            a_sn1a=alpha_sn1a
+            a_sn1a_err=alpha_sn1a_error
+        ieq = eq_data['ieq_h0_m1a']
+        yval[ieq] = a_sn1a + 5
+
+    if eq_data['nsn2']>0:
+        if sn2_hf_df is not None:
+            vcorr = sn2_hf_df["z_corr"]*(c_m_s/1000.0)
+
+            a_sn2, a_sn2_err, chisq_sn2_hf, ndof_sn2_hf = compute_alpha(
+                mag=sn2_hf_df["m0_i"],
+                mag_err=sn2_hf_df["em0_i"],
+                vcorr=vcorr,
+                vdisp=vpec_error,
+                redshift_range=redshift_range,
+                apply_redshift_range=z_range_sn2,
+                kz_function = cosmology_kz_function
+            )
+
+            r_chisq_sn2_hf=chisq_sn2_hf/ndof_sn2_hf
+            config_reader.vprint(f"\nAlpha from SNe II is computed: a_b= {a_sn2:.4f}"+u"\u00B1"+f"{a_sn2_err:.4f}, chi2={chisq_sn2_hf:2f}, dof={ndof_sn2_hf}, reduced chi2={r_chisq_sn2_hf:2f}")
+        else:
+            a_sn2=alpha_sn2
+            a_sn2_err= alpha_sn2_error
+        ieq = eq_data['ieq_h0_m2']
+        yval[ieq] = a_sn2 + 5
+
+    if eq_data['ntf']>0:
+        if tf_hf_df is not None:
+            value = tf_hf_df["m"] - tf_hf_df["M"]
+            vcorr = tf_hf_df[tf_v_column]
+
+            a_tf, a_tf_err, chisq_tf_hf, ndof_tf_hf = compute_alpha(
+                value,
+                mag_err=tf_hf_df["sigma"],
+                vcorr=vcorr,
+                vdisp=vpec_error,
+                redshift_range=redshift_range,
+                apply_redshift_range=z_range_tf,
+                kz_function = cosmology_kz_function
+            )
+            r_chisq_tf_hf=chisq_tf_hf/ndof_tf_hf
+            config_reader.vprint(f"\nAlpha from TF is computed: a_b={a_tf:.4f}"+u"\u00B1"+f"{a_tf_err:.4f}, chi2={chisq_tf_hf:2f}, dof={ndof_tf_hf}, reduced chi2={r_chisq_tf_hf:2f}")
+        else:
+            a_tf=alpha_tf
+            a_tf_err= alpha_tf_error       
+        ieq = eq_data['ieq_h0_mtf']
+        yval[ieq] = a_tf + 5
+
+    if eq_data['nsbf']>0:
+        if sbf_hf_df is not None:
+            value = sbf_hf_df["m110"] - sbf_hf_df["M110"]
+            vcorr = sbf_hf_df[sbf_v_column]
+
+            a_sbf, a_sbf_err, chisq_sbf_hf, ndof_sbf_hf = compute_alpha(
+                value,
+                mag_err=sbf_hf_df["e(m110)"],
+                vcorr=vcorr,
+                vdisp=sbf_vpec_error,
+                redshift_range=redshift_range,
+                apply_redshift_range=z_range_sbf,
+                kz_function = cosmology_kz_function,
+                optical=True,
+                ignore_cosmology=True
+            )
+            r_chisq_sbf_hf=chisq_sbf_hf/ndof_sbf_hf
+            config_reader.vprint(f"\nAlpha from SBF is computed: a_b={a_sbf:.4f}"+u"\u00B1"+f"{a_sbf_err:.4f}, chi2={chisq_sbf_hf:2f}, dof={ndof_sbf_hf}, reduced chi2={r_chisq_sbf_hf:2f}")
+        else:
+            a_sbf=alpha_sbf
+            a_sbf_err= alpha_sbf_error       
+        ieq = eq_data['ieq_h0_msbf']
+        yval[ieq] = a_sbf + 5
+
+    # --- mm Constraints (if available) ---
+    if eq_data['nmm'] > 0:
+        eq_counter = eq_data['ieq_mm_start']
+        for k in range(eq_data['nmm']):
+            ieq = eq_counter
+            yval[ieq] = mm_df.iloc[k]["logh_value"] - (mm_df.iloc[k]["cz_term"] - np.log10(mm_df.iloc[k]["v_corr"])) + np.log10(cosmology_cz_function(mm_df.iloc[k]['z'])) # MM use angular diameter distance
+            eq_counter += 1
+
+    # --- EPM Constraints (if available) ---
+    if eq_data['nepm']>0:
+        eq_counter = eq_data['ieq_epm_start']
+        for k in range(len(epm_df)):
+            ieq = eq_counter
+            yval[ieq] = epm_df.iloc[k]["logh_value"] - (epm_df.iloc[k]["cz_term"] - np.log10(epm_df.iloc[k]["v_corr"])) + np.log10(cosmology_kz_function(epm_df.iloc[k]['z'])) # EPM use luminosity distance as usual
+            eq_counter += 1
+
+    eq_data['yval'] = yval
+    eq_data.update({
+        # =====================================================================
+        # ALPHA RESULTS FROM HUBBLE FLOW FITTING
+        # =====================================================================
+        # SNe Ia
+        "a_sn1a": a_sn1a,
+        "chisq_sn1a_hf": chisq_sn1a_hf,
+        # SNe II
+        "a_sn2": a_sn2,
+        "chisq_sn2_hf": chisq_sn2_hf,
+        # Tully-Fisher
+        "a_tf": a_tf,
+        "chisq_tf_hf": chisq_tf_hf,
+        # SBF
+        "a_sbf": a_sbf,
+        "chisq_sbf_hf": chisq_sbf_hf,
+    })
+    return eq_data

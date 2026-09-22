@@ -42,7 +42,9 @@ def load_config(config_file='config.ini'):
         >>> value = config['DEFAULT']['datadir']
     """
     config = configparser.ConfigParser()
-    config.read(config_file)
+    loaded_files = config.read(config_file)
+    if not loaded_files:
+      raise FileNotFoundError(f"Could not find or read the configuration file at {config_file}")
     return config
 
 def get_config_value(config, section, key, default=None, as_float=False, as_int=False, as_bool=False):

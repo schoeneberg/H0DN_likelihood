@@ -77,7 +77,8 @@ def compute_alpha(
     mag, mag_err=None, vcorr=None, vpec=None, vcmb=None, vhel=None,
     q0=-0.55, j0=1.0, vdisp=240.0, covar=None,
     redshift_range=None, apply_redshift_range=False, ignore_offdiag=False, simplified=False,
-    optical=False, ignore_cosmology=False, debug=False
+    optical=False, ignore_cosmology=False, debug=False,
+    kz_function = None
 ):
     """Compute alpha intercept in Hubble flow magnitude-redshift relation.
     
@@ -142,7 +143,7 @@ def compute_alpha(
                     "No objects for this calibrator type after redshift selection"
                 )
         
-        kz = _kz(zhd, q0, j0, ignore_cosmology)
+        kz = kz_function(zhd) if kz_function else _kz(zhd, q0, j0, ignore_cosmology)
 
         alphavec = np.log10(vcorr) + np.log10(kz) - 0.2 * mag
         errsqvec = (0.2 * mag_err) ** 2 + (np.log10(vcorr + vdisp) - np.log10(vcorr)) ** 2
@@ -184,7 +185,7 @@ def compute_alpha(
 
         t1 = (1 + zhel) / (1 + zhd)
         t2 = c * zhd
-        t3 = _kz(zhd, q0, j0, ignore_cosmology)
+        t3 = kz_function(zhd) if kz_function else _kz(zhd, q0, j0, ignore_cosmology)
 
     # Model and velocity variance (velocity term already in log10 units)
     m_model = 5 * np.log10(t1 * t2 * t3)
@@ -192,7 +193,7 @@ def compute_alpha(
 
     if simplified:
         zhd = vcorr / c
-        kz = _kz(zhd, q0, j0, ignore_cosmology)
+        kz = kz_function(zhd) if kz_function else _kz(zhd, q0, j0, ignore_cosmology)
         m_model = 5 * (np.log10(vcorr) + np.log10(kz))
 
     useflag = np.ones_like(zhd, dtype=bool)
